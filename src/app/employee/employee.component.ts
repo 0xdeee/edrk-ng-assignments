@@ -16,9 +16,11 @@ export class EmployeeComponent implements OnInit {
       eid: 0,
       eFirstname: 'Enter Your name',
       eLastname: 'Enter your surname',
-      eDept: 'Enter your Department',
+      eDept: 'Enter your Dept',
       eCity: 'Enter your City',
-      eEmail: 'Enter yout Email',
+      eEmail: 'Enter your Email',
+      eSalary: 0,
+      eDOB: null,
     };
 
     this.employees = [
@@ -29,6 +31,8 @@ export class EmployeeComponent implements OnInit {
         eDept: 'HR',
         eCity: 'New York',
         eEmail: 'jake@company.com',
+        eSalary: 100000,
+        eDOB: new Date(),
       },
       {
         eid: 1002,
@@ -37,6 +41,8 @@ export class EmployeeComponent implements OnInit {
         eDept: 'Operations',
         eCity: 'New york',
         eEmail: 'amy@company.com',
+        eSalary: 100000,
+        eDOB: new Date(),
       },
       {
         eid: 1003,
@@ -45,6 +51,8 @@ export class EmployeeComponent implements OnInit {
         eDept: 'HR',
         eCity: 'New York',
         eEmail: 'charles@company.com',
+        eSalary: 10000,
+        eDOB: new Date(),
       },
       {
         eid: 1004,
@@ -53,6 +61,8 @@ export class EmployeeComponent implements OnInit {
         eDept: 'PR',
         eCity: 'New York',
         eEmail: 'gina@company.com',
+        eSalary: 10000,
+        eDOB: new Date(),
       },
       {
         eid: 1005,
@@ -61,6 +71,8 @@ export class EmployeeComponent implements OnInit {
         eDept: 'Operations',
         eCity: 'New York',
         eEmail: 'rosa@company.com',
+        eSalary: 1000,
+        eDOB: new Date(),
       },
       {
         eid: 1006,
@@ -69,6 +81,8 @@ export class EmployeeComponent implements OnInit {
         eDept: 'Management',
         eCity: 'New York',
         eEmail: 'ray@company.com',
+        eSalary: 1000000,
+        eDOB: new Date(),
       },
       {
         eid: 1007,
@@ -77,14 +91,18 @@ export class EmployeeComponent implements OnInit {
         eDept: 'Ops',
         eCity: 'New York',
         eEmail: 'scully@company.com',
+        eSalary: 100,
+        eDOB: new Date(),
       },
       {
         eid: 1008,
-        eFirstname: 'John',
+        eFirstname: 'Michel',
         eLastname: 'Hitchcock',
         eDept: 'Ops',
         eCity: 'New York',
         eEmail: 'hitch@company.com',
+        eSalary: 100,
+        eDOB: new Date(),
       },
     ];
   }

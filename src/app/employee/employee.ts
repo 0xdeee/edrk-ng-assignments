@@ -5,4 +5,6 @@ export interface Employee {
   eDept: string;
   eCity: string;
   eEmail: string;
+  eSalary: number;
+  eDOB: Date;
 }

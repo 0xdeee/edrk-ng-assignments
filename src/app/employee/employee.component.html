@@ -1,66 +1,93 @@
 <section class="container">
   <form class="form" *ngIf="employee">
-    <div>
-      <label for="eid" class="form-label">Employee ID</label>
-      <input
-        type="number"
-        class="form-control"
-        id="eid"
-        name="eid"
-        [(ngModel)]="this.employee.eid"
-      />
+    <div class="row">
+      <div class="col-2">
+        <label for="eid" class="form-label">Employee ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="eid"
+          name="eid"
+          [(ngModel)]="this.employee.eid"
+        />
+      </div>
+      <div class="col-5">
+        <label for="eFirstname" class="form-label">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="eFirstname"
+          name="eFirstname"
+          [(ngModel)]="this.employee.eFirstname"
+        />
+      </div>
+      <div class="col-5">
+        <label for="eLastname" class="form-label">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="eLastname"
+          name="eLastname"
+          [(ngModel)]="this.employee.eLastname"
+        />
+      </div>
     </div>
-    <div>
-      <label for="eFirstname" class="form-label">First Name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="eFirstname"
-        name="eFirstname"
-        [(ngModel)]="this.employee.eFirstname"
-      />
+    <div class="row">
+      <div class="col-2">
+        <label for="eDept" class="form-label">Dept</label>
+        <input
+          type="text"
+          class="form-control"
+          id="eDept"
+          name="eDept"
+          [(ngModel)]="this.employee.eDept"
+        />
+      </div>
+      <div class="col-4">
+        <label for="eCity" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="eCity"
+          name="eCity"
+          [(ngModel)]="this.employee.eCity"
+        />
+      </div>
+      <div class="col-6">
+        <label for="eEmail" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="eEmail"
+          name="eEmail"
+          [(ngModel)]="this.employee.eEmail"
+        />
+      </div>
     </div>
-    <div>
-      <label for="eLastname" class="form-label">Last Name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="eLastname"
-        name="eLastname"
-        [(ngModel)]="this.employee.eLastname"
-      />
+    <div class="row">
+      <div class="col-3">
+        <label for="eSalary" class="form-label">Salary</label>
+        <input
+          type="number"
+          class="form-control"
+          id="eSalary"
+          name="eSalary"
+          placeholder="Enter you salary"
+          [(ngModel)]="this.employee.eSalary"
+        />
+      </div>
+      <div class="col-4">
+        <label for="eDOB" class="form-label">DOB</label>
+        <input
+          type="date"
+          class="form-control"
+          id="eDOB"
+          name="eDOB"
+          [(ngModel)]="this.employee.eEmail"
+        />
+      </div>
     </div>
-    <div>
-      <label for="eDept" class="form-label">Dept</label>
-      <input
-        type="text"
-        class="form-control"
-        id="eDept"
-        name="eDept"
-        [(ngModel)]="this.employee.eDept"
-      />
-    </div>
-    <div>
-      <label for="eCity" class="form-label">City</label>
-      <input
-        type="text"
-        class="form-control"
-        id="eCity"
-        name="eCity"
-        [(ngModel)]="this.employee.eCity"
-      />
-    </div>
-    <div>
-      <label for="eEmail" class="form-label">Email</label>
-      <input
-        type="eEmail"
-        class="form-control"
-        id="eEmail"
-        name="eEmail"
-        [(ngModel)]="this.employee.eEmail"
-      />
-    </div>
-    <button class="btn btn-primary btn-md" (click)="UpdateEmp()">
+    <button class="btn btn-primary btn-md mt-5" (click)="UpdateEmp()">
       Update List
     </button>
   </form>
@@ -80,6 +107,8 @@
         <th>Dept</th>
         <th>City</th>
         <th>Email</th>
+        <th>Salary</th>
+        <th>DOB</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -91,6 +120,8 @@
         <td>{{ e.eDept }}</td>
         <td>{{ e.eCity }}</td>
         <td>{{ e.eEmail }}</td>
+        <td>{{ e.eSalary | currency: "INR":true }}</td>
+        <td>{{ e.eDOB | date: "MMM, d, y" | uppercase }}</td>
         <td>
           <button class="btn btn-warning btn-sm" (click)="editEmp(e)">
             Edit<i class="fas fa-trash fa-sm"></i>
