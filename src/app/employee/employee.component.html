@@ -1,4 +1,10 @@
-<section class="container">
+<div class="container d-grid gap-2 mt-5 mb-5">
+  <button class="btn btn-primary btn-lg" (click)="oldEmpFormToggleFn()">
+    Employee Form Show/Hide Toggle
+  </button>
+</div>
+
+<section class="container" *ngIf="oldEmpFormToggle">
   <form class="form border rounded-3 p-5" *ngIf="employee">
     <div class="row">
       <div class="col-2">

@@ -1,5 +1,12 @@
 <section class="container">
-  <table class="table table-striped">
+  <div class="alert alert-danger" *ngIf="isError">
+    <pre>
+      Unable to fetch data from endpoint
+      Reason: {{ errorResponse }}
+      details: {{ errorExplanation }}
+    </pre>
+  </div>
+  <table class="table table-striped" *ngIf="!isError">
     <thead class="table-dark">
       <tr>
         <th>Employee_Id</th>

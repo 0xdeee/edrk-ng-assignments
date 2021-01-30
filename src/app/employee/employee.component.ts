@@ -10,6 +10,7 @@ export class EmployeeComponent implements OnInit {
   employees: Employee[];
   employee: Employee;
   oldEmpTableToggle = false;
+  oldEmpFormToggle = false;
   constructor() {}
 
   ngOnInit(): void {
@@ -118,5 +119,9 @@ export class EmployeeComponent implements OnInit {
 
   oldEmpTableToggleFn(): void {
     this.oldEmpTableToggle = !this.oldEmpTableToggle;
+  }
+
+  oldEmpFormToggleFn(): void {
+    this.oldEmpFormToggle = !this.oldEmpFormToggle;
   }
 }
