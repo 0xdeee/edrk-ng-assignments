@@ -1,5 +1,5 @@
 <section class="container">
-  <form class="form" *ngIf="employee">
+  <form class="form border rounded-3 p-5" *ngIf="employee">
     <div class="row">
       <div class="col-2">
         <label for="eid" class="form-label">Employee ID</label>
@@ -93,11 +93,15 @@
   </form>
 </section>
 
-<hr />
+<div class="container d-grid gap-2 mt-5 mb-5">
+  <button class="btn btn-primary btn-lg" (click)="oldEmpTableToggleFn()">
+    Old Employee Table Show/Hide Toggle
+  </button>
+</div>
 <section class="container alert alert-warning" *ngIf="employees.length === 0">
   The are no employess in the table
 </section>
-<section class="container">
+<section class="container" *ngIf="oldEmpTableToggle">
   <table class="table table-striped">
     <thead class="table-dark">
       <tr>

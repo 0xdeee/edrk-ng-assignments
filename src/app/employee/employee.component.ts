@@ -9,6 +9,7 @@ import { Employee } from './employee';
 export class EmployeeComponent implements OnInit {
   employees: Employee[];
   employee: Employee;
+  oldEmpTableToggle = false;
   constructor() {}
 
   ngOnInit(): void {
@@ -113,5 +114,9 @@ export class EmployeeComponent implements OnInit {
 
   editEmp(employee: Employee): void {
     this.employee = employee;
+  }
+
+  oldEmpTableToggleFn(): void {
+    this.oldEmpTableToggle = !this.oldEmpTableToggle;
   }
 }
